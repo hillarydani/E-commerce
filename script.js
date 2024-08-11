@@ -26,10 +26,10 @@ function addProduct() {
     newArray.forEach((eachProduct, index) => {
         displayProduct += `
             <div class="product_card">
-            <img  width="200px" height="200px" src=${eachProduct.image} id="product_cardie_image" />
-            <h3 class="text-success fs-5 mt-2">${eachProduct.title.slice(0, 10)}</h3>
-            <strong class="product_cardie_text one">$${eachProduct.price}</strong>
-            <button class="c-cart button_now" type="button">View product</button>
+             <img  width="200px" height="200px" src=${eachProduct.image} id="product_cardie_image" />
+             <h3 class="text-success fs-5 mt-2">${eachProduct.title.slice(0, 10)}</h3>
+             <strong class="product_cardie_text one">$${eachProduct.price}</strong>
+             <button class="c-cart button_now" type="button">View product</button>
           </div>
         `
     })
