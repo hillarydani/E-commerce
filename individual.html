@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    
+    <link rel="stylesheet" href="./styles/indiv-page.css">
+    <script src="./js/cart.js"></script>
+</head>
+<body>
+     <!-- <h1>rrr</h1>  -->
+     <div class="main_container">
+
+  <!-- NAV BAR -->
+  <nav class="sticky-top navbar navbar-expand-lg bg-body-tertiary px-5">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="#">REFLEX</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+        aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+          <li class="nav-item">
+            <a class="nav-link active" aria-current="page" href="#">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="./shop.html">Shop</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="./about.html">About</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Contact</a>
+          </li>
+          <!-- <li class="nav-item dropdown">
+               <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                 Dropdown
+               </a>
+               <ul class="dropdown-menu">
+                 <li><a class="dropdown-item" href="#">Action</a></li>
+                 <li><a class="dropdown-item" href="#">Another action</a></li>
+                 <li><hr class="dropdown-divider"></li>
+                 <li><a class="dropdown-item" href="#">Something else here</a></li>
+               </ul>
+             </li> -->
+          <!-- <li class="nav-item">
+               <a class="nav-link disabled" aria-disabled="true">About</a>
+             </li>
+             <li class="nav-item">
+               <a class="nav-link disabled" aria-disabled="true">Contact</a>
+             </li> -->
+        </ul>
+        <form class="d-flex" role="search">
+          <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search" />
+          <!-- <button class="btn btn-outline-success" type="submit">Search</button> -->
+        </form>
+        <!-- <div class="search-bar">
+               <input type="text" placeholder="Search for products...">
+           </div> -->
+        <div class="cart-icon">
+          <img width="30px" height="30px" src="./images/shopping-cart.png" alt="" />
+          <span>0</span>
+        </div>
+      </div>
+    </div>
+  </nav>
+        <!-----------------------------------------------main------------------------------------------------------->
+         <section class="d-flex flex-column individual_container mx-5">
+            <!-- <div class="row">
+                 <div class=" col con">
+                    <img src='../'alt="" class="product-image">
+
+                 </div>
+                 <div class=" col-6 con">
+                    <p class="my-4 product_heading">Jogger Lorem ipsum dolor sit amet consectetur adipisicing elit. Unde asperiores nulla iusto, obcaeca</p>
+                    <p class="my-4">$234</p>
+                     <div class=" d-flex rating-star my-2">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="rating">
+                                <path d="M12.0006 15.968L16.2473 18.3451L15.2988 13.5717L18.8719 10.2674L14.039 9.69434L12.0006 5.27502V15.968ZM12.0006 18.26L4.94715 22.2082L6.52248 14.2799L0.587891 8.7918L8.61493 7.84006L12.0006 0.5L15.3862 7.84006L23.4132 8.7918L17.4787 14.2799L19.054 22.2082L12.0006 18.26Z">
+
+                                </path>
+                            </svg>
+
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="rating">
+                                <path d="M12.0006 15.968L16.2473 18.3451L15.2988 13.5717L18.8719 10.2674L14.039 9.69434L12.0006 5.27502V15.968ZM12.0006 18.26L4.94715 22.2082L6.52248 14.2799L0.587891 8.7918L8.61493 7.84006L12.0006 0.5L15.3862 7.84006L23.4132 8.7918L17.4787 14.2799L19.054 22.2082L12.0006 18.26Z">
+                                
+                                </path>
+                            </svg>
+
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"class="rating">
+                                <path d="M12.0006 15.968L16.2473 18.3451L15.2988 13.5717L18.8719 10.2674L14.039 9.69434L12.0006 5.27502V15.968ZM12.0006 18.26L4.94715 22.2082L6.52248 14.2799L0.587891 8.7918L8.61493 7.84006L12.0006 0.5L15.3862 7.84006L23.4132 8.7918L17.4787 14.2799L19.054 22.2082L12.0006 18.26Z">
+
+                                </path>
+                            </svg>
+
+                        </div>
+                    
+
+                        <button class="button_now " type="button">Add to Cart</button>
+                 </div>
+                 <div class="col con">
+                    <div class=" main_delivery">
+                        <h6 class="my-2 product_heading1">DELIVERY AND RETURNS</h6>
+                        <p class="para1 "><span class="Jomasy">Jomasy</span> <span class="Express">Express</span></p>
+                        <p class="para2">Free delivery on thousands of products in Lagos, Ibadan & Abuja Details<p>
+                        <p class="para3 my-1">Choose your location</p>
+
+                        <select  class="select" name="" value="specify location" id="" class="my-2">
+                            <option value="">specify location</option>
+                            <option value="">Imo</option>
+                            <option value="">Delta</option>
+                        </select>
+
+                        <select class="select" value="specify location" id="">
+                            <option value="">specify location</option>
+                            <option value="">Imo</option>
+                            <option value="">DElta</option>
+                        </select>
+                        
+                    </div>
+                    
+                    
+                 </div> -->
+
+            </div>
+
+         </section>
+
+         <section class="details" >
+            <h5 class="text-white">Product Details</h5>
+            <div class="product_details">
+                <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Molestias delectus voluptatum quae sit aut vitae dolor? Similique, iste? Nulla, autem recusandae. Aspernatur quisquam ut nesciunt error molestias? Sit magni impedit velit, dolores quod explicabo ea cupiditate quos? Architecto enim, eum ut id quam laudantium dolorem veniam sint magni exercitationem. Fuga quaerat ducimus repellat beatae ipsum ab! Veritatis quis voluptatem reprehenderit aperiam fugit incidunt consequuntur cum fuga in quod soluta, qui vel libero. Voluptatum a distinctio temporibus. Dignissimos, voluptate! Molestias, doloremque laudantium. Eaque dolorem asperiores beatae suscipit numquam cum aperiam maxime quasi voluptatum repellat, facilis cupiditate quidem quas totam, dolores hic?</p>
+
+            </div>
+            
+            
+         </section>
+
+
+        <!-----------------------------------------------FOOTER------------------------------------------------------->
+
+        <footer class="bg-dark text-white mt-5">
+            <div class="container">
+              <div class="row">
+                <div class="col-md-4">
+                  <h5>About Us</h5>
+                  <p>Reflex is the goto to shop online</p>
+                </div>
+                <div class="col-md-4">
+                  <h5>Contact Us</h5>
+                  <ul class="list-unstyled">
+                    <li>Email: info@reflex.com</li>
+                    <li>Phone: +123 456 7890</li>
+                    <li>Address: 123 Main St, New City</li>
+                  </ul>
+                </div>
+                <div class="col-md-4">
+                  <h5>Follow Us</h5>
+                  <ul class="list-unstyled">
+                    <li><a href="#" class="text-white">Facebook</a></li>
+                    <li><a href="#" class="text-white">Twitter</a></li>
+                    <li><a href="#" class="text-white">LinkedIn</a></li>
+                  </ul>
+                </div>
+              </div>
+              <div class="row mt-3">
+                <div class="col text-center">
+                  <p>&copy; 2024 REFLEX. All rights reserved.</p>
+                </div>
+              </div>
+            </div>
+          </footer>
+
+
+     </div>
+     
+    
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+        crossorigin="anonymous"></script>
+    <script src="./js/Indiv-page.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+    crossorigin="anonymous"></script>
+<script src="./js/Indiv-page.js"></script>
+</body>
+</html>
+
+
+
+
+ 
