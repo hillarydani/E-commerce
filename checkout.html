@@ -4,55 +4,140 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>OMO</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <link rel="stylesheet" href="css/style.css">
-
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+    integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous" />
+  <link rel="stylesheet" href="./css/style.css" />
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+    crossorigin="anonymous"></script>
 </head>
+
 <body>
-    <header>
-        <div class="logo">Reflex</div>
-        <nav>
-            <ul>
-                <li><a href="#">Home</a></li>
-                <li><a href="./shop.html">Shop</a></li>
-                <li><a href="./about.html">About</a></li>
-                <li><a href="./contact.html">Contact</a></li>
-            </ul>
-        </nav>
-        <input type="text" placeholder="Search...">
+  <!-- NAV BAR -->
+  <nav class="sticky-top navbar navbar-expand-lg bg-body-tertiary px-5">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="./index.html">REFLEX</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+        aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+          <li class="nav-item">
+            <a class="nav-link active" aria-current="page" href="./index.html">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="./shop.html">Shop</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="./about.html">About</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="./contact.html">Contact</a>
+          </li>
+          <!-- <li class="nav-item dropdown">
+               <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                 Dropdown
+               </a>
+               <ul class="dropdown-menu">
+                 <li><a class="dropdown-item" href="#">Action</a></li>
+                 <li><a class="dropdown-item" href="#">Another action</a></li>
+                 <li><hr class="dropdown-divider"></li>
+                 <li><a class="dropdown-item" href="#">Something else here</a></li>
+               </ul>
+             </li> -->
+          <!-- <li class="nav-item">
+               <a class="nav-link disabled" aria-disabled="true">About</a>
+             </li>
+             <li class="nav-item">
+               <a class="nav-link disabled" aria-disabled="true">Contact</a>
+             </li> -->
+        </ul>
+        <form class="d-flex" role="search">
+          <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search" />
+          <!-- <button class="btn btn-outline-success" type="submit">Search</button> -->
+        </form>
+        <!-- <div class="search-bar">
+               <input type="text" placeholder="Search for products...">
+           </div> -->
         <div class="cart-icon">
-            <i class="fas fa-shopping-cart"></i>
-            <span id="cart-count">0</span>
+          <img width="30px" height="30px" src="./images/shopping-cart.png" alt="" />
+          <span>0</span>
         </div>
-    </header>
-    <form id="checkout-form">
-        <div class="billing-info">
+      </div>
+    </div>
+  </nav>
+
+
+
+    <form id="checkout-form" class="px-2">
+        <div class="billing-info mb-4">
             <h2>Billing Information</h2>
-            <input type="text" placeholder="Name">
-            <input type="text" placeholder="Address">
-            <input type="email" placeholder="Email">
-            <input type="tel" placeholder="Phone">
+            <div class="form-group">
+                <input type="text" class="form-control mb-2" placeholder="Name">
+            </div>
+            <div class="form-group">
+                <input type="text" class="form-control mb-2" placeholder="Address">
+            </div>
+            <div class="form-group">
+                <input type="email" class="form-control mb-2" placeholder="Email">
+            </div>
+            <div class="form-group">
+                <input type="tel" class="form-control mb-2" placeholder="Phone">
+            </div>
         </div>
-        <div class="shipping-info">
+        
+        <div class="shipping-info mb-4">
             <h2>Shipping Information</h2>
-            <input type="checkbox" id="same-as-billing"> Same as billing
-            <input type="text" placeholder="Name">
-            <input type="text" placeholder="Address">
-            <input type="email" placeholder="Email">
-            <input type="tel" placeholder="Phone">
+            <div class="form-check mb-2">
+                <input type="checkbox" class="form-check-input" id="same-as-billing">
+                <label class="form-check-label" for="same-as-billing">Same as billing</label>
+            </div>
+            <div class="form-group">
+                <input type="text" class="form-control mb-2" placeholder="Name">
+            </div>
+            <div class="form-group">
+                <input type="text" class="form-control mb-2" placeholder="Address">
+            </div>
+            <div class="form-group">
+                <input type="email" class="form-control mb-2" placeholder="Email">
+            </div>
+            <div class="form-group">
+                <input type="tel" class="form-control mb-2" placeholder="Phone">
+            </div>
         </div>
-        <div class="payment-info">
+        
+        <div class="payment-info mb-4">
             <h2>Payment Information</h2>
-            <input type="text" placeholder="Credit Card Number">
-            <input type="text" placeholder="Expiration Date">
-            <input type="text" placeholder="CVV">
+            <div class="form-group">
+                <input type="text" class="form-control mb-2" placeholder="Credit Card Number">
+            </div>
+            <div class="form-group">
+                <input type="text" class="form-control mb-2" placeholder="Expiration Date">
+            </div>
+            <div class="form-group">
+                <input type="text" class="form-control mb-2" placeholder="CVV">
+            </div>
         </div>
-        <div class="order-summary">
+        
+        <div class="order-summary mb-4">
             <h2>Order Summary</h2>
             <p>Total: $<span id="order-total">0</span></p>
         </div>
-        <button type="submit">Place Order</button>
+        
+        <button type="submit" class="btn btn-primary">Place Order</button>
     </form>
+    
+    <style>
+        #checkout-form {
+            max-width: 600px;
+            margin: 0 auto;
+        }
+    </style>
+    
     <hr style="width: 2px;">
     
 
